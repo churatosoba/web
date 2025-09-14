@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- SEO Meta Tags -->
+  <title>ちゅらとそば | 沖縄そば専門店 - 相模原市中央区 日曜限定20食</title>
+  <meta name="description" content="相模原市中央区の沖縄そば専門店「ちゅらとそば」。毎週日曜日だけの特別な時間。1日20食限定。沖縄そばを優しい空間でお楽しみください。営業時間11:30-14:30">
+  <meta name="keywords" content="沖縄そば,相模原,中央区,日曜限定,ランチ,ちゅらとそば,沖縄料理">
+  <meta name="author" content="ちゅらとそば">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="ちゅらとそば | 沖縄そば">
+  <meta property="og:description" content="相模原市中央区、日曜限定20食の沖縄そば専門店">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:url" content="https://churatosoba.com">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:locale" content="ja_JP">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ちゅらとそば | 沖縄そば専門店">
+  <meta name="twitter:description" content="日曜限定20食の本格沖縄そば">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "ちゅらとそば",
+    "description": "日曜限定20食の沖縄そば専門店",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "中央1-1-7",
+      "addressLocality": "相模原市中央区",
+      "addressRegion": "神奈川県",
+      "postalCode": "252-0239",
+      "addressCountry": "JP"
+    },
+    "servesCuisine": "沖縄料理",
+    "priceRange": "¥¥",
+    "openingHours": "Su 11:30-14:30"
+  }
+  </script>
+  
+  <link rel="canonical" href="https://churatosoba.com">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700&family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #4A6B5C;      /* ロゴのグリーン */
+      --primary-light: #5E8370; /* 明るめのグリーン */
+      --secondary: #E8D4B0;     /* 温かみのあるベージュ */
+      --accent: #D4A574;        /* アクセントカラー */
+      --bg-cream: #F5F0E8;      /* クリーム色の背景 */
+      --bg-white: #FFFFFF;
+      --text-dark: #2D3436;
+      --text-light: #636E72;
+      --shadow-soft: 0 10px 30px rgba(74, 107, 92, 0.08);
+      --shadow-hover: 0 15px 40px rgba(74, 107, 92, 0.12);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      background: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header */
+    header {
+      background: var(--bg-white);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 15px 0;
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .logo-img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: var(--bg-cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(74, 107, 92, 0.1);
+    }
+    
+    .logo-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .shisa-icon {
+      width: 50px;
+      height: 50px;
+      fill: var(--primary);
+    }
+    
+    .brand-text h1 {
+      font-family: 'Shippori Mincho', serif;
+      font-size: 26px;
+      color: var(--primary);
+      font-weight: 600;
+    }
+    
+    .brand-text p {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-top: 2px;
+    }
+    
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+    
+    nav a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+      position: relative;
+    }
+    
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s;
+    }
+    
+    nav a:hover::after {
+      width: 100%;
+    }
+    
+    /* Wave decoration */
+    .wave-decoration {
+      width: 100%;
+      height: 3px;
+      background: var(--primary);
+      position: relative;
+      margin: 20px 0;
+      opacity: 0.3;
+    }
+    
+    .wave-decoration::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      border-radius: 50%;
+      transform: scaleX(2);
+    }
+    
+    /* Hero Section */
+    .hero {
+      padding: 60px 0;
+      background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-white) 100%);
+    }
+    
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    
+    .hero-content {
+      animation: fadeInLeft 1s ease-out;
+    }
+    
+    .hero-badge {
+      display: inline-block;
+      background: var(--secondary);
+      color: var(--primary);
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 20px;
+      border: 2px solid var(--primary);
+    }
+    
+    .hero h2 {
+      font-family: 'Shippori Mincho', serif;
+      font-size: 42px;
+      color: var(--primary);
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+    
+    .hero-description {
+      color: var(--text-light);
+      font-size: 16px;
+      margin-bottom: 30px;
+      line-height: 1.8;
+    }
+    
+    .hero-image {
+      position: relative;
+      animation: fadeInRight 1s ease-out;
+    }
+    
+    .hero-image img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: var(--shadow-soft);
+      border: 3px solid var(--bg-white);
+    }
+    
+    .floating-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--bg-white);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      color: var(--primary);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border: 2px solid var(--primary);
+    }
+    
+    /* Info Cards */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+    
+    .info-card {
+      background: var(--bg-white);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-left: 4px solid var(--primary);
+    }
+    
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .info-card h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .info-card-icon {
+      width: 24px;
+      height: 24px;
+      fill: var(--primary);
+    }
+    
+    /* Menu Section */
+    .menu-section {
+      padding: 60px 0;
+      background: var(--bg-white);
+      margin: 40px 0;
+    }
+    
+    .section-title {
+      text-align: center;
+      font-family: 'Shippori Mincho', serif;
+      font-size: 36px;
+      color: var(--primary);
+      margin-bottom: 10px;
+      position: relative;
+    }
+    
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+    
+    .menu-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    
+    .menu-item {
+      background: var(--bg-cream);
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--secondary);
+    }
+    
+    .menu-item h4 {
+      color: var(--primary);
+      font-size: 24px;
+      margin-bottom: 15px;
+      font-family: 'Shippori Mincho', serif;
+    }
+    
+    .menu-item ul {
+      list-style: none;
+      margin-top: 20px;
+    }
+    
+    .menu-item li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(74, 107, 92, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-dark);
+    }
+    
+    .menu-item li::before {
+      content: '◯';
+      color: var(--primary);
+      font-weight: bold;
+    }
+    
+    .price-card {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white;
+      padding: 35px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+    }
+    
+    .price-label {
+      font-size: 14px;
+      opacity: 0.9;
+      margin-bottom: 10px;
+    }
+    
+    .price-amount {
+      font-size: 48px;
+      font-weight: 700;
+      margin: 15px 0;
+      font-family: 'Shippori Mincho', serif;
+    }
+    
+    .price-note {
+      font-size: 14px;
+      opacity: 0.9;
+      line-height: 1.5;
+    }
+    
+    /* Access Section */
+    .access-section {
+      padding: 60px 0;
+      background: var(--bg-cream);
+    }
+    
+    .access-content {
+      background: var(--bg-white);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: var(--shadow-soft);
+    }
+    
+    .access-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 30px;
+    }
+    
+    .access-details h4 {
+      color: var(--primary);
+      margin-bottom: 15px;
+      font-size: 20px;
+      font-family: 'Shippori Mincho', serif;
+    }
+    
+    .access-details p {
+      color: var(--text-light);
+      margin-bottom: 10px;
+      line-height: 1.8;
+    }
+    
+    .map-container {
+      width: 100%;
+      height: 400px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      border: 2px solid var(--secondary);
+    }
+    
+    /* Instagram Section */
+    .instagram-section {
+      text-align: center;
+      padding: 40px 0;
+      background: var(--bg-white);
+    }
+    
+    .instagram-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCB045);
+      color: white;
+      padding: 15px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 10px 30px rgba(131, 58, 180, 0.3);
+    }
+    
+    .instagram-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(131, 58, 180, 0.4);
+    }
+    
+    .instagram-icon {
+      width: 24px;
+      height: 24px;
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--primary);
+      color: white;
+      padding: 40px 0;
+      margin-top: 0;
+    }
+    
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .footer-brand h3 {
+      font-family: 'Shippori Mincho', serif;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    .footer-info {
+      opacity: 0.9;
+      font-size: 14px;
+    }
+    
+    /* Decorative Elements */
+    .shisa-pattern {
+      position: absolute;
+      opacity: 0.05;
+      pointer-events: none;
+    }
+    
+    /* Animations */
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      
+      .hero h2 {
+        font-size: 32px;
+      }
+      
+      nav {
+        display: none;
+      }
+      
+      .menu-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .access-info {
+        grid-template-columns: 1fr;
+      }
+      
+      .map-container {
+        height: 300px;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .logo-img {
+        width: 60px;
+        height: 60px;
+      }
+      
+      .brand-text h1 {
+        font-size: 22px;
+      }
+    }
+    
+    /* Accessibility */
+    :focus-visible {
+      outline: 3px solid var(--primary);
+      outline-offset: 3px;
+    }
+    
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-area">
+          <div class="logo-img">
+  <img src="logo.png" alt="ちゅらとそば ロゴ">
+            <svg class="shisa-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 20 C30 20 20 35 20 50 C20 65 30 80 50 80 C70 80 80 65 80 50 C80 35 70 20 50 20 Z" fill="currentColor" opacity="0.2"/>
+              <circle cx="35" cy="40" r="5" fill="currentColor"/>
+              <circle cx="65" cy="40" r="5" fill="currentColor"/>
+              <path d="M35 60 Q50 70 65 60" stroke="currentColor" stroke-width="3" fill="none"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <h1>ちゅらとそば</h1>
+            <p>CHURA TO SOBA ー 沖縄そば専門店</p>
+          </div>
+        </div>
+        <nav role="navigation" aria-label="メインナビゲーション">
+          <a href="#menu">メニュー</a>
+          <a href="#access">アクセス</a>
+          <a href="#instagram">Instagram</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="hero-badge">日曜限定オープン</span>
+            <h2>毎週日曜日だけの<br>特別な時間</h2>
+            <p class="hero-description">
+              1日20食限定。<br>
+            </p>
+            
+            <div class="info-grid">
+              <div class="info-card">
+                <h3>
+                  <svg class="info-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v6l4 2"/>
+                  </svg>
+                  営業時間
+                </h3>
+                <p><strong>日曜日 11:30 〜 14:30</strong></p>
+                <p style="color: var(--text-light); font-size: 14px; margin-top: 10px;">
+                  20食限定のため、売切れ次第終了
+                </p>
+              </div>
+              
+              <div class="info-card">
+                <h3>
+                  <svg class="info-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                  </svg>
+                  おもてなし
+                </h3>
+                <p>さんぴん茶</p>
+                <p>シークワーサーシャーベット付き</p>
+                <p style="color: var(--text-light); font-size: 14px; margin-top: 10px;">
+                  沖縄の風を感じる特別なひととき
+                </p>
+              </div>
+            </div>
+          </div>
+          
+         <div class="hero-image">
+  <img src="okinawasoba.png" alt="相模原沖縄そば" width="600" height="400">
+  <span class="floating-badge">1日20食限定</span>
+</div>
+
+      </div>
+    </section>
+    
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <h2 class="section-title">メニュー</h2>
+        <p class="section-subtitle">MENU</p>
+        <div class="menu-content">
+          <div class="menu-item">
+            <h4>本日の沖縄そば</h4>
+            <p style="color: var(--text-light); line-height: 1.8;">
+              優しい出汁。<br>
+              とろとろの三枚肉。<br>
+            </p>
+            <ul>
+              <li>沖縄そば（三枚肉・かまぼこ・紅生姜）</li>
+              <li>さんぴん茶（冷）</li>
+              <li>シークワーサーシャーベット</li>
+            </ul>
+          </div>
+          
+          <div class="price-card">
+            <p class="price-label">セット価格（税込）</p>
+            <div class="price-amount">¥980</div>
+            <p class="price-note">
+              丁寧に作る20食だけの<br>
+              特別な味をお楽しみください
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="access-section" id="access">
+      <div class="container">
+        <h2 class="section-title">アクセス</h2>
+        <p class="section-subtitle">ACCESS</p>
+        <div class="access-content">
+          <div class="access-info">
+            <div class="access-details">
+              <h4>店舗情報</h4>
+              <p><strong>ちゅらとそば</strong></p>
+              <p>〒252-0239</p>
+              <p>神奈川県相模原市中央区中央１丁目１−７</p>
+              <p style="margin-top: 15px;"><strong>最寄り駅</strong></p>
+              <p>JR横浜線 相模原駅 徒歩12分</p>
+            </div>
+            
+            <div class="access-details">
+              <h4>営業のご案内</h4>
+              <p><strong>営業日：日曜日のみ</strong></p>
+              <p><strong>営業時間：11:30 - 14:30</strong></p>
+              <p style="margin-top: 15px; color: var(--primary);">
+                <strong>⚠️ 1日20食限定</strong>
+              </p>
+              <p>売切れ次第終了となります</p>
+              <p style="margin-top: 10px;">
+                最新情報はInstagramでご確認ください
+              </p>
+            </div>
+          </div>
+          
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6490.241718721705!2d139.36190025594772!3d35.575408635778665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018fd6189d8c969%3A0xe80f568697f03e72!2z44CSMjUyLTAyMzkg56We5aWI5bed55yM55u45qih5Y6f5biC5Lit5aSu5Yy65Lit5aSu77yR5LiB55uu77yR4oiS77yX!5e0!3m2!1sja!2sjp!4v1757844836846!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="instagram-section" id="instagram">
+      <div class="container">
+        <h2 class="section-title">最新情報</h2>
+        <p class="section-subtitle">INSTAGRAM</p>
+        <p style="color: var(--text-light); margin-bottom: 30px;">
+          営業情報や売切れ情報は<br class="mobile-only">
+          Instagramでお知らせしています
+        </p>
+        <a href="https://www.instagram.com/chura.to.soba?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+           class="instagram-btn" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           aria-label="Instagram公式アカウントを見る">
+          <svg class="instagram-icon" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.405a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+          </svg>
+          Instagram
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container">
